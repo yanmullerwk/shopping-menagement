@@ -1,20 +1,20 @@
 public class Endereco {
     private String nomeRua;
+    private String numero;
     private String cidade;
     private String estado;
     private String pais;
     private String cep;
-    private String numero;
     private String complemento;
 
-    public Endereco(String nomeRua, String cidade, String estado, String pais, String cep, String numero,
+    public Endereco(String nomeRua,String numero, String cidade, String estado, String pais, String cep,
             String complemento) {
         this.nomeRua = nomeRua;
+        this.numero = numero;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
         this.cep = cep;
-        this.numero = numero;
         this.complemento = complemento;
     }
 
