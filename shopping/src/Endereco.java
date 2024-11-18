@@ -7,7 +7,7 @@ public class Endereco {
     private String cep;
     private String complemento;
 
-    public Endereco(String nomeRua,String numero, String cidade, String estado, String pais, String cep,
+    public Endereco(String nomeRua, String numero, String cidade, String estado, String pais, String cep,
             String complemento) {
         this.nomeRua = nomeRua;
         this.numero = numero;
@@ -74,15 +74,14 @@ public class Endereco {
         this.complemento = complemento;
     }
 
-   @Override
-   public String toString() {
-       return "Rua: "+nomeRua+
-       "Numero: "+numero+
-       "cidade: "+cidade+", "+
-       "Estado: "+estado+", "+
-       "pais: "+pais+", "+
-       "complemento: "+complemento+", "+
-       "cep: "+cep+",";
-   }
-    
+    public String toString() {
+        return "Rua: " + nomeRua +
+                "Numero: " + numero +
+                "cidade: " + cidade + ", " +
+                "Estado: " + estado + ", " +
+                "pais: " + pais + ", " +
+                "complemento: " + complemento + ", " +
+                "cep: " + cep + ",";
+    }
+
 }

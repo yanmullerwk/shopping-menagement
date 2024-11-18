@@ -4,15 +4,15 @@ public class Data {
     private int ano;
 
     public Data(int dia, int mes, int ano) {
-        if(validaData(dia, mes, ano)){
-            this.dia=dia;
-            this.mes=mes;
-            this.ano=ano;
-        }else{
+        if (validaData(dia, mes, ano)) {
+            this.dia = dia;
+            this.mes = mes;
+            this.ano = ano;
+        } else {
             System.out.println("[ERRO] data invalida: data alterada para 1/1/2000");
-            this.dia=1;
-            this.mes=1;
-            this.ano=2000;
+            this.dia = 1;
+            this.mes = 1;
+            this.ano = 2000;
         }
     }
 
@@ -40,20 +40,20 @@ public class Data {
         this.ano = ano;
     }
 
-    private boolean validaData(int dia, int mes, int ano){
-        if(dia < 1 || dia > 31){
+    private boolean validaData(int dia, int mes, int ano) {
+        if (dia < 1 || dia > 31) {
             return false;
         }
 
-        int[] diasPorMes = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] diasPorMes = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-        if(isBissexto(ano)){
-            diasPorMes[1]= 29;
+        if (isBissexto(ano)) {
+            diasPorMes[1] = 29;
         }
 
-        return dia > 1 && dia <= diasPorMes[mes-1];
+        return dia > 1 && dia <= diasPorMes[mes - 1];
     }
-    
+
     public boolean isBissexto() {
         if (this.ano % 4 == 0) {
             if (this.ano % 100 == 0) {
@@ -65,7 +65,7 @@ public class Data {
             return false;
         }
     }
- 
+
     public static boolean isBissexto(int ano) {
         if (ano % 4 == 0) {
             if (ano % 100 == 0) {
@@ -91,9 +91,8 @@ public class Data {
         return false;
     }
 
-    @Override
     public String toString() {
-        return "data:"+dia+'/'+mes+'/'+ano;
+        return "data:" + dia + '/' + mes + '/' + ano;
     }
 
 }

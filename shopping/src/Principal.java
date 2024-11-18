@@ -91,7 +91,7 @@ public class Principal {
                     Produto produto = new Produto(nomeProduto, precoProduto, validade);
 
                     Data dataReferencia = new Data(20, 10, 2023);
-					
+
                     if (produto.estaVencido(dataReferencia)) {
                         System.out.println("PRODUTO VENCIDO");
                     } else {

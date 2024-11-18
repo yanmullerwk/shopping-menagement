@@ -3,10 +3,10 @@ public class Produto {
     private float preco;
     private Data dataValidade;
 
-    public Produto(String nome, float preco, Data dataValidade){
-        this.nome=nome;
-        this.preco=preco;
-        this.dataValidade=dataValidade;
+    public Produto(String nome, float preco, Data dataValidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.dataValidade = dataValidade;
     }
 
     public String getNome() {
@@ -24,9 +24,9 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
-    
-    public String toString(){
-        return "nome: "+nome+", "+"preço: "+preco;
+
+    public String toString() {
+        return "nome: " + nome + ", " + "preço: " + preco + "Data de Validade:" + dataValidade;
     }
 
     public Data getDataValidade() {
@@ -37,7 +37,7 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
-    public boolean estaVencido(Data data){
+    public boolean estaVencido(Data data) {
         return this.dataValidade.isBefore(data);
     }
 }
